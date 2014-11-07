@@ -6,7 +6,7 @@
 		<tr>
 			<th>Name</th>
 			<th>Description</th>
-			<th>Price in Cents</th>
+			<th>Price in dollars</th>
 		</tr>
 	</th>
 
@@ -14,7 +14,7 @@
 		<tr>
 			<td><%= link_to(product.name, product_path(product)) %></td>
 			<td><%= product.description %></td>
-			<td><%= product.price_in_cents %></td>
+			<td><%= product.formatted_price %></td>
 		</tr>
 	<% end %>
 </table>
