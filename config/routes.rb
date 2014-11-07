@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'users/create'
+
   resources :products
+  resources :users, only: [:new, :create]
   
   # post 'products/create'   =>     'products#create'
   # get 'products'           =>     'products#index'
