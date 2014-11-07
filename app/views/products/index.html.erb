@@ -1,0 +1,19 @@
+<h1>Products</h1>
+<table>
+	
+	<th>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price in Cents</th>
+		</tr>
+	</th>
+
+	<% @products.each do |product| %>
+		<tr>
+			<td><%= link_to(product.name, product_path(product)) %></td>
+			<td><%= product.description %></td>
+			<td><%= product.price_in_cents %></td>
+		</tr>
+	<% end %>
+</table>
